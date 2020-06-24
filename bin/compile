@@ -10,7 +10,7 @@ echo "------> Generating .profile.d file to generate google-credentials.json at 
 echo "hier start"
 echo "BUILD_DIR=$BUILD_DIR"
 echo "GOOGLE_CREDENTIALS=${GOOGLE_CREDENTIALS@Q}"
-echo "hier stop
+echo "hier stop"
 
 mkdir -p $BUILD_DIR/.profile.d
 echo "echo ${GOOGLE_CREDENTIALS@Q} > /app/google-credentials.json" > $BUILD_DIR/.profile.d/google-credentials.sh
