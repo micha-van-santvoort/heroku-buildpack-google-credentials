@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir> <env-dir>
+
+BUILD_DIR=${1:-}
+echo "$BUILD_DIR"
 
 echo "------> Generating .profile.d file to generate google-credentials.json at startup"
-mkdir -p $HOME/.profile.d
-echo "echo ${GOOGLE_CREDENTIALS@Q} > /app/google-credentials.json" > $HOME/.profile.d/google-credentials.sh
-chmod +x $HOME/.profile.d/google-credentials.sh
+mkdir -p $BUILD_DIR/.profile.d
+ls -l $BUILD_DIR/.profile.d
+echo ${GOOGLE_CREDENTIALS@Q} 
+echo "echo ${GOOGLE_CREDENTIALS@Q} > /app/google-credentials.json" > $BUILD_DIR/.profile.d/google-credentials.sh
+ls -l /app
+chmod +x $BUILD_DIR/.profile.d/google-credentials.sh
