@@ -7,6 +7,8 @@ echo "$BUILD_DIR"
 echo "------> Generating .profile.d file to generate google-credentials.json at startup"
 mkdir -p $BUILD_DIR/.profile.d
 ls -l $BUILD_DIR/.profile.d
+echo "set"
+set
 echo "google cred = ${GOOGLE_CREDENTIALS}"
 echo "google cred@Q = ${GOOGLE_CREDENTIALS@Q}"
 
