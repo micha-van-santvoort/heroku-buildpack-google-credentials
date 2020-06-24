@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+echo "------> Generating .profile.d file to generate google-credentials.json at startup"
+mkdir -p $HOME/.profile.d
+echo "echo ${GOOGLE_CREDENTIALS@Q} > /app/google-credentials.json" > $HOME/.profile.d/google-credentials.sh
+chmod +x $HOME/.profile.d/google-credentials.sh
